@@ -1,0 +1,43 @@
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
+note over palvelin:
+Selaimelta saadun GET-pyynnön perusteella
+palvelin lähettää osoitteessa /spa olevan 
+HTML-koodin selaimelle suoritettavaksi
+end note
+palvelin-->selain: HTML-koodi
+note over selain:
+suoritettava HTML-koodi luo
+pyynnön palvelimelle osoitteeseen /main.css
+end note
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+note over palvelin:
+palvelimen osoitteessa /main.css
+oleva koodi lähettää main.css tyyli-
+koodin selaimelle
+end note
+palvelin-->selain: main.css
+note over selain:
+spa HTML-koodin suoritus jatkuu.
+Koodi luo GET-pyynnön palvelimen
+osoitteeseen /spa.js
+end note
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js
+note over palvelin:
+palvelimen osoitteessa spa.js oleva
+koodi lähettää spa.js javascript muotoisen
+koodin selaimelle.
+end note
+palvelin-->selain: spa.js
+
+note over selain:
+selain alkaa suorittaa js-koodia
+joka pyytää JSON-datan palvelimelta
+end note
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+palvelin-->selain: [{ content: "HTML on helppoa", date: "2019-01-01" }, ...]
+
+note over selain:
+selain suorittaa tapahtumankäsittelijän
+joka renderöi muistiinpanot näytölle
+end note

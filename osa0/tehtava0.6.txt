@@ -1,0 +1,16 @@
+note over selain:
+tallenna-napin painamisen
+jälkeen spa.js-koodi
+estää palvelinta tekemästä 
+oletusarvoisen muistiinpanon 
+käsittelyn ja redirectauksen ja siten
+sivun uudelleenlataamisen. Spa.js-koodi
+sitten luo uuden mistiinpanon, tallentaa
+sen selaimella olevalle notes-listalle
+ja piirtää notes-listan uudelleen sivulle.
+Lopuksi spa.js koodi luo POST-
+pyynnön palvelimelle, joka lähettää
+uuden muistiinpanon palvelimelle
+osoitteeseen /new_note_spa
+end note
+selain->palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
